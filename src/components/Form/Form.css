@@ -1,0 +1,50 @@
+.name, .contact, .socials, .skills, .education, .experience {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.form {
+    /* position: relative; */
+    /* top: 0; */
+    /* left: 0; */
+    /* transform: translate(-50%, -50%); */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    justify-content: center;
+    background-color: transparent;
+}
+
+.form-wrapper {
+    background-color: transparent;
+    /* height: auto; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    /* position: fixed; */
+    /* top: 0; */
+    flex-direction: column;
+}
+
+.first {
+    background: violet;
+}
+
+.second {
+    background: lightgreen;
+}
+
+input, textarea {
+    border: 1px solid #aaa;
+    padding: 0.25rem;
+    border-radius: 2.5px;
+    margin: 0.25rem;
+}

@@ -1,23 +1,14 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 import './App.css'
+import Form from './components/Form/Form';
+import Header from './components/Header/Header';
 
 function App() {
 
   return (
     <>
       <div className="App">
-        <div className="wrapper">
-          <FontAwesomeIcon 
-            icon={faIdCard}
-            className="title-icon" 
-            style={{height: "80px", width: "auto" }} 
-          />
-          <div className="text">
-            <h1 className="title">Uniform</h1>
-            <h3 className="tagline">one form to rule them all</h3>
-          </div>
-        </div>
+        <Header />
+        <Form />
       </div>
     </>
   )

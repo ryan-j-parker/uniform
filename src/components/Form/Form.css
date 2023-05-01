@@ -1,36 +1,23 @@
 .name, .contact, .socials, .skills, .education, .experience {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* align-items: center; */
-    /* justify-content: center; */
 }
 
 .form {
-    /* position: relative; */
-    /* top: 0; */
-    /* left: 0; */
-    /* transform: translate(-50%, -50%); */
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: auto;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    /* align-items: center; */
     justify-content: center;
     background-color: transparent;
 }
 
 .form-wrapper {
     background-color: transparent;
-    /* height: auto; */
     margin: 0 auto;
     display: flex;
     align-items: center;
     align-self: center;
     justify-content: center;
-    /* position: fixed; */
-    /* top: 0; */
     flex-direction: column;
 }
 
@@ -47,4 +34,30 @@ input, textarea {
     padding: 0.25rem;
     border-radius: 2.5px;
     margin: 0.25rem;
+}
+
+.role {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: purple;
+    font-size: 1.1rem;
+}
+
+.actual-form {
+    margin: 0 auto;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    width: 50%;
+}
+
+.form-wrapper {   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }

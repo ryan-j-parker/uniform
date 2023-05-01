@@ -1,16 +1,52 @@
+import { useState } from 'react';
 import './Form.css';
+import Input from './Input';
 
 export default function Form() {
+    const [role, setRole] = useState('');
+
+    const handleChange = (e) => {
+        setRole(e.target.value);
+    }
+
+    const getData = (e) => {
+        e.preventDefault();
+        console.log(e.target.value);
+    };
+
   return (
     <div className="form-wrapper">
         <div className="form" >
+            <form onSubmit={getData} className="form actual-form">
             {/* <div className="first"> */}
                 <div className="name">
                     <label htmlFor="first">Name</label>
-                    <input name="first" type="text" placeholder="First" />
-                    <input type="text" placeholder="Middle" />
-                    <input type="text" placeholder="Last" />
-                    <input type="text" placeholder="Occupation" />
+                    <Input name="first" type="text" placeholder="First" />
+                    <Input name="middle" type="text" placeholder="Middle" />
+                    <Input name="last" type="text" placeholder="Last" />
+                    <div 
+                        className="role" 
+                        onChange={handleChange}
+                        value={role}
+                    >
+                        <label htmlFor="role">Desired Role</label>
+                        <label> 
+                            frontend
+                            <Input name="role" type="radio" value="frontend" />
+                        </label>
+                        <label>
+                            backend
+                            <Input name="role" type="radio" value="backend" />
+                        </label>
+                        <label>
+                            full stack
+                            <Input name="role" type="radio" value="full stack" />
+                        </label>
+                        <label>
+                            UI/UX
+                            <Input name="role" type="radio" value="UI/UX" />
+                        </label>
+                    </div>
                 </div>
                 <div className="contact">
                     <label htmlFor="email">Contact</label>
@@ -50,6 +86,20 @@ export default function Form() {
                     <input type="text" placeholder="Skill 9" />
                     <input type="text" placeholder="Skill 10" />
                 </div>
+                <div className="languages">
+                    <label htmlFor="experience">Languages and Frameworks</label>
+                    <input type="text" placeholder="Language 1" />
+                    <input type="text" placeholder="Language 2" />
+                    <input type="text" placeholder="Language 3" />
+                    <input type="text" placeholder="Language 4" />
+                    <input type="text" placeholder="Language 5" />
+                    <input type="text" placeholder="Language 6" />
+                    <input type="text" placeholder="Language 7" />
+                    <input type="text" placeholder="Language 8" />
+                    <input type="text" placeholder="Language 9" />
+                    <input type="text" placeholder="Language 10" />
+                </div>
+                </form>
             </div>
             {/* <div className="second">
                 <div className="experience">
@@ -78,6 +128,7 @@ export default function Form() {
                 </div>
             </div> */}
         {/* </div> */}
+        <button onClick={getData}>Submit</button>
     </div>
   );
 }
